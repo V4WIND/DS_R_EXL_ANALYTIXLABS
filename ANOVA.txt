@@ -1,0 +1,13 @@
+Import the file - football;
+
+team = c( rep('Spain',17),rep('German',17),rep('Barcelona',17),rep('MAdrid',17),rep('Brazil',17))
+
+weight = c(football$Spain, football$Spain, football$Spain, football$Spain, football$Spain)
+
+df = data.frame(team, weight)
+
+plot(wieght ~ team, data = df)
+
+football.aov  = aov(weight ~ team, data = df)
+
+summary(football.aov)
